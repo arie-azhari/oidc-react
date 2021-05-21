@@ -1,0 +1,80 @@
+{
+  "name": "oidc-react",
+  "version": "1.5.1",
+  "private": false,
+  "description": "",
+  "main": "build/src/index.js",
+  "files": [
+    "/build"
+  ],
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc -p tsconfig.release.json",
+    "test": "jest --coverage src --passWithNoTests",
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint . --ext .ts,.tsx",
+    "generate-docs": "typedoc --out docs src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjerkio/oidc-react.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bjerkio/oidc-react/issues"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.4.0",
+    "@testing-library/react": "^11.0.4",
+    "@types/faker": "^5.1.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14.14.41",
+    "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.2.0",
+    "@typescript-eslint/parser": "^4.2.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^24.0.2",
+    "eslint-plugin-react": "^7.19.0",
+    "faker": "^5.0.0",
+    "jest": "^25.3.0",
+    "jest-cli": "^26.0.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "ts-jest": "^25.3.1",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typedoc": "^0.20.5",
+    "typedoc-plugin-markdown": "^3.0.3",
+    "typescript": "^3.5.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/__fixtures__/",
+      "<rootDir>/build"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -10
+      }
+    }
+  },
+  "homepage": "https://github.com/bjerkio/oidc-react#readme",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "dependencies": {
+    "oidc-client": "^1.11.5"
+  }
+}
