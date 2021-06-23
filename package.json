@@ -75,6 +75,6 @@
     "react-dom": "^16.8.0 || ^17.0.0"
   },
   "dependencies": {
-    "oidc-client": "^1.11.5"
+    "oidc-client": "git+ssh://git@github.com/IdentityModel/oidc-client-js.git#release"
   }
 }
